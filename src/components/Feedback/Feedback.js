@@ -1,78 +1,78 @@
 import React, { Component } from 'react';
 import './Feedback.css';
 
-class Feedback extends Component {
-   state = {
-     good: 0,
-     neutral: 0,
-     bad: 0,
-   }
+// class Feedback extends Component {
+//    state = {
+//      good: 0,
+//      neutral: 0,
+//      bad: 0,
+//    }
 
-    // clickButton = (event) => {
-    //     console.log(event.target)
-    // }
+//     // clickButton = (event) => {
+//     //     console.log(event.target)
+//     // }
     
-    clickButtonGood = () => {
-        // console.log('Клик на Good')
-        this.setState(prevState => {
-            return {
-                good: prevState.good + 1,
-            }
-        });
-    }
-     clickButtonNeutral = () => {
-        //  console.log('Клик на Neutral')
-         this.setState(prevState => ({
-             neutral: prevState.neutral + 1,
-         }));
-    }
-     clickButtonBad = () => {
-        //  console.log('Клик на Bad')
-         this.setState(prevState => ({
-             bad: prevState.bad + 1,
-         }));
-    }
+//     clickButtonGood = () => {
+//         // console.log('Клик на Good')
+//         this.setState(prevState => {
+//             return {
+//                 good: prevState.good + 1,
+//             }
+//         });
+//     }
+//      clickButtonNeutral = () => {
+//         //  console.log('Клик на Neutral')
+//          this.setState(prevState => ({
+//              neutral: prevState.neutral + 1,
+//          }));
+//     }
+//      clickButtonBad = () => {
+//         //  console.log('Клик на Bad')
+//          this.setState(prevState => ({
+//              bad: prevState.bad + 1,
+//          }));
+//     }
 
-    render() {
+//     render() {
 
-    const total = this.state.good + this.state.neutral + this.state.bad;
-        // console.log(total);
-        const positiveFeedback = Math.round(this.state.good * 100 / total) + 0;
-        console.log(positiveFeedback);
-        return (
-        <div className="Feedback">
-            <h2 className="Feedback__title">Please leave feedback</h2>
-                <button
-                    className="Feedback__button"
-                    type="button"
-                    onClick={this.clickButtonGood}>
-                    Good
-                </button>
-                <button
-                    className="Feedback__button"
-                    type="button"
-                    onClick={this.clickButtonNeutral}>
-                    Neutral
-                    </button>
-                <button
-                    className="Feedback__button"
-                    type="button"
-                    onClick={this.clickButtonBad}>
-                    Bad
-                    </button>
+//     const total = this.state.good + this.state.neutral + this.state.bad;
+//         // console.log(total);
+//         const positiveFeedback = Math.round(this.state.good * 100 / total) + 0;
+//         console.log(positiveFeedback);
+//         return (
+//         <div className="Feedback">
+//             <h2 className="Feedback__title">Please leave feedback</h2>
+//                 <button
+//                     className="Feedback__button"
+//                     type="button"
+//                     onClick={this.clickButtonGood}>
+//                     Good
+//                 </button>
+//                 <button
+//                     className="Feedback__button"
+//                     type="button"
+//                     onClick={this.clickButtonNeutral}>
+//                     Neutral
+//                     </button>
+//                 <button
+//                     className="Feedback__button"
+//                     type="button"
+//                     onClick={this.clickButtonBad}>
+//                     Bad
+//                     </button>
                 
-                <h3 className="Statistics__title">Statistics</h3>
-                <ul className="Statistics__list">
-                    <li>Good: { this.state.good }</li>
-                    <li>Neutral: { this.state.neutral }</li>
-                    <li>Bad: { this.state.bad }</li>
-                    <li>Total: { total }</li>
-                    <li>Positive feedback: { positiveFeedback } %</li>
-                </ul>
-       </div>
-        )   
-    }
-}
+//                 <h3 className="Statistics__title">Statistics</h3>
+//                 <ul className="Statistics__list">
+//                     <li>Good: { this.state.good }</li>
+//                     <li>Neutral: { this.state.neutral }</li>
+//                     <li>Bad: { this.state.bad }</li>
+//                     <li>Total: { total }</li>
+//                     <li>Positive feedback: { positiveFeedback } %</li>
+//                 </ul>
+//        </div>
+//         )   
+//     }
+// }
 // function Feedback () {
 //     return (
 //         <h2>
